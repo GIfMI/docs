@@ -1,0 +1,157 @@
+/* ==========================================================================
+   GIfMI / UGent Light Theme
+   ========================================================================== */
+[data-md-color-scheme="gifmi"] {
+  /* Native browser UI elements (scrollbars, form controls) */
+  color-scheme: light;
+
+  /* --- Base Page Colors (Soft UGent Blue-Tinted Background) --- */
+  --md-default-bg-color: #f6f9fe;               /* Subtle cool blue-tinted white matching #1e64c8 */
+  --md-default-bg-color--light: #e9f0fa;        /* UGent corporate light blue surface/cards */
+  --md-default-fg-color: #1e64c8;               /* UGent primary corporate blue UI text & icons */
+  --md-default-fg-color--light: #505050;        /* Secondary / muted text */
+  --md-default-fg-color--lighter: #646464;      /* UGent dark gray date/caption color (#646464) */
+  --md-default-fg-color--lightest: #d5e2f5;     /* Soft blue-gray borders & dividers */
+
+  /* --- Primary Brand Colors (UGent Corporate Blue Header & Tabs) --- */
+  --md-primary-fg-color: #1e64c8;               /* Exact UGent corporate primary blue */
+  --md-primary-fg-color--light: #4a88dc;        /* Lighter shade (hover states) */
+  --md-primary-fg-color--dark: #164b96;         /* Darker shade (active/pressed states) */
+  --md-primary-bg-color: #ffffff;               /* High-contrast white text/icons on primary bg */
+
+  /* --- Accent Colors (Interactive Elements, Buttons, Hover Highlights) --- */
+  --md-accent-fg-color: #1e64c8;                /* Primary interactive accent color */
+  --md-accent-fg-color--transparent: #1e64c81a; /* 10% opacity tint for hover states */
+  --md-accent-bg-color: #ffffff;                /* Text/icon color on top of accent bg */
+
+  /* --- Typography & Links --- */
+  --md-typeset-color: #202020;                  /* UGent standard body text black (#202020) */
+  --md-typeset-a-color: #1e64c8;                /* UGent standard link blue */
+
+  /* --- Code Blocks & Inline Code --- */
+  --md-code-bg-color: #ebf1fa;                  /* Soft UGent-tinted code block background */
+  --md-code-fg-color: #202020;                  /* Default code text color */
+
+  /* --- Mermaid Diagrams --- */
+  --md-mermaid-node-bg-color: #e9f0fa;          /* Diagram node background */
+  --md-mermaid-node-fg-color: #1e64c8;          /* Diagram node border/accent */
+  --md-mermaid-label-fg-color: #202020;         /* Diagram label text color */
+
+  /* --- Admonitions (Callout Boxes) --- */
+  --md-admonition-fg-color: #ff0000;            /* Preserved custom admonition accent color */
+  --md-admonition-bg-color: #ffffff;            /* Crisp white card against #f6f9fe page bg */
+}
+
+/* ==========================================================================
+   GIfMI / UGent Dark Theme
+   ========================================================================== */
+[data-md-color-scheme="gifmi-dark"] {
+  /* Native browser UI elements (scrollbars, form controls) */
+  color-scheme: dark;
+
+  /* --- Base Page Colors (Deep Navy Harmonized with #1e64c8) --- */
+  --md-default-bg-color: #0a1426;               /* Deep UGent-navy page background (hue 215°) */
+  --md-default-bg-color--light: #12223d;        /* Elevated navy surface / cards */
+  --md-default-fg-color: #edf3ff;               /* Crisp off-white UI text & icons */
+  --md-default-fg-color--light: #b8c7e0;        /* Secondary / muted text */
+  --md-default-fg-color--lighter: #7689a8;      /* Captions & muted labels */
+  --md-default-fg-color--lightest: #1e355c;     /* Subtle navy borders & dividers */
+
+  /* --- Primary Brand Colors (UGent Corporate Blue Header & Tabs) --- */
+  --md-primary-fg-color: #1e64c8;               /* Exact UGent corporate primary blue */
+  --md-primary-fg-color--light: #4a88dc;        /* Lighter shade (hover states) */
+  --md-primary-fg-color--dark: #164b96;         /* Darker shade (active/pressed states) */
+  --md-primary-bg-color: #ffffff;               /* High-contrast white text/icons on primary bg */
+
+  /* --- Accent Colors (UGent Corporate Yellow Highlights & Buttons) --- */
+  --md-accent-fg-color: #ffd200;                /* Exact UGent corporate yellow (#FFD200) */
+  --md-accent-fg-color--transparent: #ffd2001f; /* 12% opacity yellow tint for hover states */
+  --md-accent-bg-color: #0a1426;                /* Dark navy text on top of yellow accent bg */
+
+  /* --- Typography & Links --- */
+  --md-typeset-color: #f4f7fc;                  /* Soft high-contrast body text */
+  --md-typeset-a-color: #72a7ff;                /* Accessible light UGent blue for links */
+
+  /* --- Code Blocks & Inline Code --- */
+  --md-code-bg-color: #0f1d36;                  /* Deep blue-slate code background */
+  --md-code-fg-color: #edf3ff;                  /* Default code text color */
+
+  /* --- Mermaid Diagrams --- */
+  --md-mermaid-node-bg-color: #e9f0fa;          /* UGent corporate light blue node fill */
+  --md-mermaid-node-fg-color: #1e64c8;          /* UGent corporate blue node border */
+  --md-mermaid-label-fg-color: #202020;         /* UGent black diagram text */
+
+  /* --- Admonitions (Callout Boxes) --- */
+  --md-admonition-fg-color: #1e64c8;            /* Preserved custom admonition accent color */
+  --md-admonition-bg-color: #12223d;            /* Elevated dark surface for callouts */
+}
+
+/* ==========================================================================
+   Header, Navigation & Typography Overrides
+   ========================================================================== */
+
+/* Lock header and top navigation bar to exact UGent corporate blue (#1e64c8) in both modes */
+[data-md-color-scheme="gifmi"] .md-header,
+[data-md-color-scheme="gifmi"] .md-tabs,
+[data-md-color-scheme="gifmi-dark"] .md-header,
+[data-md-color-scheme="gifmi-dark"] .md-tabs {
+  background-color: #1e64c8;
+  color: #ffffff;
+}
+
+/* Page titles (H1) in UGent corporate blue */
+[data-md-color-scheme="gifmi"] .md-typeset h1 {
+  color: #1e64c8;
+}
+
+[data-md-color-scheme="gifmi-dark"] .md-typeset h1 {
+  color: #72a7ff;
+}
+
+/* Keep active sidebar links bright & readable against dark navy background */
+[data-md-color-scheme="gifmi-dark"] .md-nav__link--active {
+  color: #72a7ff;
+  font-weight: 600;
+}
+
+/* UGent yellow accent on active top navigation tabs in dark mode */
+[data-md-color-scheme="gifmi-dark"] .md-tabs__link--active {
+  color: #ffd200;
+}
+
+/* ==========================================================================
+   Admonition Text Overrides
+   ========================================================================== */
+
+/* Force black text in light-mode admonitions */
+[data-md-color-scheme="gifmi"] .md-typeset .admonition,
+[data-md-color-scheme="gifmi"] .md-typeset details,
+[data-md-color-scheme="gifmi"] .md-typeset .admonition > *:not(.admonition-title),
+[data-md-color-scheme="gifmi"] .md-typeset details > *:not(summary) {
+  color: #000000;
+}
+
+/* Force white text in dark-mode admonitions */
+[data-md-color-scheme="gifmi-dark"] .md-typeset .admonition,
+[data-md-color-scheme="gifmi-dark"] .md-typeset details,
+[data-md-color-scheme="gifmi-dark"] .md-typeset .admonition > *:not(.admonition-title),
+[data-md-color-scheme="gifmi-dark"] .md-typeset details > *:not(summary) {
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Theme-Specific Image Visibility Utilities
+   Allows toggling images via URL fragments (e.g., image.png#only-light)
+   ========================================================================== */
+
+/* Hide dark-mode-only images when light theme is active */
+[data-md-color-scheme="gifmi"] img[src$="#only-dark"],
+[data-md-color-scheme="gifmi"] img[src$="#gh-dark-mode-only"] {
+  display: none;
+}
+
+/* Hide light-mode-only images when dark theme is active */
+[data-md-color-scheme="gifmi-dark"] img[src$="#only-light"],
+[data-md-color-scheme="gifmi-dark"] img[src$="#gh-light-mode-only"] {
+  display: none;
+}

@@ -1,0 +1,13 @@
+
+# Zensical
+site/
+
+# Other folders
+info/
+
+# Python
+.venv/
+
+# IDE
+.vscode/
+.DS_Store
