@@ -1,0 +1,41 @@
+default_variant = "default"
+
+[variants.default]
+
+# --- CFMS ---
+cfms.name = "CFMS site"
+cfms.url = "https://cfms.ugent.be"
+cfms.link = "[CFMS site](https://cfms.ugent.be)"
+cfms.url_link = "[https://cfms.ugent.be](https://cfms.ugent.be)"
+cfms.url_link_ext = "[https://secure9.ideaelan.com/UGhent/Public/AppLogin.aspx](https://secure9.ideaelan.com/UGhent/Public/AppLogin.aspx)"
+cfms.email = "cfms@ugent.be"
+
+# --- Idea Elan ---
+ideaelan.name = "Idea Elan site"
+ideaelan.url = "https://www.ideaelan.com"
+ideaelan.link = "[Idea Elan](https://www.ideaelan.com)"
+ideaelan.url_link = "[https://www.ideaelan.com](https://www.ideaelan.com)"
+
+gifmi.name = "GIfMI"
+gifmi.url = "https://gifmi.ugent.be"
+gifmi.link = "[CORE GIfMI](https://gifmi.ugent.be)"
+gifmi.url_link = "[https://gifmi.ugent.be](https://gifmi.ugent.be)"
+
+gifmidocs.name = "GIfMI Documentation Hub"
+gifmidocs.url = "https://gifmi.github.io/docs"
+gifmidocs.link = "[GIfMI Documentation Hub](https://gifmi.github.io/docs)"
+gifmidocs.url_link = "[https://gifmi.github.io/docs](https://gifmi.github.io/docs)"
+
+# --- Roles ---
+gifmi.role.facadmin = "facility admin"
+gifmi.role.engineer = "techical support engineer"
+gifmi.role.assistant = "research assistant"
+gifmi.role.safety = "MRI safety responsable"
+
+
+# --- Abbreviations ---
+abbr.gifmi = "Ghent Institute for Functional and Metabolic Imaging"
+abbr.ugent = "Ghent University"
+abbr.uzgent = "Ghent University Hospital"
+abbr.cfms = "Core Facility Management System"
+abbr.dochub = "GIfMI Documentation Hub"

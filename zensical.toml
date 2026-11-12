@@ -4,7 +4,7 @@
 ############################################
 
 site_url = "https://gifmi.github.io/docs/"
-site_name = "GIfMI Documentation Center"
+site_name = "GIfMI Documentation Hub"
 site_description = ""
 site_author = "Pieter Vandemaele"
 
@@ -28,16 +28,19 @@ edit_uri = "edit/main/docs/"
 
 # Navigation
 ############################################
-nav = [
-  { "Get started" = "index.md" },
-  { "Markdown in 5min" = "markdown.md" },
-]
+
+# nav = [
+#   { "Get started" = "index.md" },
+#   { "Markdown in 5min" = "markdown.md" },
+# ]
+
+# Extra resoures
+############################################
 
 extra_css = ["stylesheets/extra.css"]
-
 # extra_javascript = ["javascripts/extra.js"]
 
-# # Extra Project Metadata & Cookie Consent
+# Extra Project Metadata & Cookie Consent
 ############################################
 
 [project.extra]
@@ -206,3 +209,5 @@ pymdownx.tabbed.alternate_style = true # Tabbed content blocks
 pymdownx.tabbed.combine_header_slug = true
 pymdownx.tasklist.custom_checkbox = true # Interactive checkboxes in lists (- [x])
 pymdownx.tilde = {}             # Strikethrough syntax (~~text~~)
+
+#"zensical.directives" = {}      # Enable zensical directives functionality
