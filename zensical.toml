@@ -8,20 +8,23 @@ site_name = "GIfMI Documentation Center"
 site_description = ""
 site_author = "Pieter Vandemaele"
 
-copyright = "Copyright &copy; 2026 Pieter Vandemaele"
+copyright = """
+  Copyright &copy; 2026 Pieter Vandemaele -
+  <a href="#__consent">Change cookie settings</a>
+"""
 
 # docs_dir = "docs" # default
 # site_dir = "site" # default
 
-# Repo configuration
+# Repository configuration
 ############################################
 
-# remote_branch: gh-pages # default: gh-pages
-# remote_name: origin # default origin
-# repo_url: https://github.com/GIfMI/docs/ # default null
-# repo_name: 'GitHub' # default: 'GitHub', 'Bitbucket' or 'GitLab' or hostname of repo_url
-# edit_uri: edit/main/docs/ # default edit/master/main/ for GitHub and GitLab repos or src/default/docs/ for a Bitbucket repo, if repo_url matches those domains, otherwise null
-# edit_uri_template: 'edit/main/docs/{path}' # default null
+# remote_branch = "gh-pages" # default: gh-pages
+# remote_name = "origin" # default: origin
+repo_url = "https://github.com/GIfMI/docs/"
+repo_name = "GIfMI/docs"
+edit_uri = "edit/main/docs/"
+# edit_uri_template = "edit/main/docs/{path}" # default: null
 
 # Navigation
 ############################################
@@ -29,6 +32,41 @@ nav = [
   { "Get started" = "index.md" },
   { "Markdown in 5min" = "markdown.md" },
 ]
+
+extra_css = ["stylesheets/extra.css"]
+
+# extra_javascript = ["javascripts/extra.js"]
+
+# # Extra Project Metadata & Cookie Consent
+############################################
+
+[project.extra]
+key = "value"
+generator = false
+
+[project.extra.consent]
+title = "Cookie consent"
+description = """
+  We use cookies to recognize your repeated visits and preferences, as well
+  as to measure the effectiveness of our documentation and whether users
+  find what they're searching for. With your consent, you're helping us to
+  make our documentation better.
+"""
+actions = [
+  "accept",
+  "reject",
+  "manage", 
+]
+
+
+# [[project.extra.social]]
+# icon = "fontawesome/brands/github"
+# link = "https://github.com/user/repo"
+
+# [[project.extra.social]]
+# icon = "fontawesome/brands/mastodon"
+# link = "https://fosstodon.org/@user"
+
 
 # Theme configuration
 ############################################
@@ -41,33 +79,47 @@ favicon = "assets/logo/logo_transp.png"
 
 language = "en"
 scheme = "gifmi"
+
 features = [
-  "announce.dismiss",
-  # "content.action.edit",
-  # "content.action.view",
-  "content.code.annotate",
-  "content.code.copy",
-  "content.code.select",
-  "content.footnote.tooltips",
-  "content.tabs.link",
-  "content.tooltips",
-  # "header.autohide",
-  # "navigation.expand",
-  "navigation.footer",
-  "navigation.indexes",
-  "navigation.instant",
-  "navigation.instant.prefetch",
-  # "navigation.instant.progress",
-  "navigation.path",
-  # "navigation.prune",
-  "navigation.sections",
-  # "navigation.tabs",
-  # "navigation.tabs.sticky",
-  "navigation.top",
-  "navigation.tracking",
-  "search.highlight",
-  # "toc.follow",
-  # "toc.integrate",
+  # --- Announcements ---
+  "announce.dismiss",          # Allow users to close/dismiss the top announcement bar
+
+  # --- Content & Page Actions ---
+  "content.action.edit",       # Add an "Edit this page" pencil icon button (requires repo_url & edit_uri)
+  "content.action.view",       # Add a "View source of this page" code icon button
+  "content.code.annotate",     # Enable interactive callout annotations inside code blocks
+  "content.code.copy",         # Show a "Copy to clipboard" button on all code blocks
+  "content.code.select",       # Show a button to select/exclude prompt symbols (e.g., `$` or `>>>`) when copying code
+  "content.footnote.tooltips", # Render footnote references as hoverable tooltips instead of jumping to the bottom
+  "content.tabs.link",         # Synchronize tab selection across the entire site (e.g., switching all tabs from Python to Bash at once)
+  "content.tooltips",          # Upgrade standard HTML title attributes into styled, rich tooltips
+
+  # --- Header & Footer ---
+  # "header.autohide",           # Automatically hide the top header bar when scrolling down and reveal it when scrolling up
+  
+  # --- Navigation & Sidebar ---
+  "navigation.footer",         # Display Previous / Next page links in the bottom footer
+  # "navigation.expand",         # Expand all collapsible subsections in the left sidebar by default
+  #"navigation.indexes",        # Allow section index pages (index.md) to be attached directly to section titles
+  "navigation.instant",        # Enable instant XHR page loading without full browser reloads (SPA-like behavior)
+  "navigation.instant.prefetch", # Pre-fetch pages in the background when hovering over links (requires navigation.instant)
+  "navigation.instant.progress", # Display a thin loading progress bar at the top during slow instant page transitions
+  "navigation.path",           # Render breadcrumb navigation above the page title
+  "navigation.prune",          # Only render visible navigation items in the HTML to speed up builds on very large sites
+ # "navigation.sections",       # Render top-level sidebar items as bold, non-collapsible section headers
+ # "navigation.tabs",           # Move top-level navigation sections into horizontal tabs below the header
+ # "navigation.tabs.sticky",    # Keep navigation tabs pinned to the top when scrolling down (requires navigation.tabs)
+  "navigation.top",            # Show a floating "Back to top" button when scrolling up
+  "navigation.tracking",       # Automatically update the URL hash in the address bar with the currently visible anchor heading
+
+  # --- Search ---
+  "search.highlight",          # Highlight all occurrences of search terms on the target page after clicking a search result
+  "search.share",              # Add a "Share" button to search results to copy a direct link to the search query
+  "search.suggest",            # Display autocomplete search term suggestions while typing
+
+  # --- Table of Contents (Right Sidebar) ---
+  "toc.follow",                # Automatically scroll the right-hand Table of Contents sidebar to keep the active heading in view
+  "toc.integrate",             # Merge the right-hand Table of Contents directly into the left-hand navigation sidebar
 ]
 
 # [project.theme.font]
@@ -116,57 +168,41 @@ toggle.name = "Switch to system preference"
 #toggle.name = "Switch to system preference"
 
 
-# [[project.extra.social]]
-# icon = "fontawesome/brands/github"
-# link = "https://github.com/user/repo"
-
-# [[project.extra.social]]
-# icon = "fontawesome/brands/mastodon"
-# link = "https://fosstodon.org/@user"
-
-# Extra
-############################################
-
-extra_css = ["stylesheets/extra.css"]
-
-# extra_javascript = ["javascripts/extra.js"]
-
-[project.extra]
-key = "value"
-
 # Markdown extensions
 ############################################
 
 [project.markdown_extensions]
-abbr = {}
-admonition = {}
-attr_list = {}
-def_list = {}
-footnotes = {}
-md_in_html = {}
-toc.permalink = true
-pymdownx.arithmatex.generic = true
-pymdownx.betterem = {}
-pymdownx.caret = {}
-pymdownx.details = {}
+abbr = {}                       # Abbreviations (e.g., *HTML* -> HyperText Markup Language)
+admonition = {}                 # Styled callout boxes (note, warning, tip, etc.)
+attr_list = {}                  # Custom HTML attributes on elements (e.g., classes, IDs)
+def_list = {}                   # Term definition lists
+footnotes = {}                  # Document footnotes
+md_in_html = {}                 # Allow Markdown syntax inside raw HTML blocks
+toc.permalink = true            # Add clickable anchor permalinks to all headings
+
+# Advanced formatting & syntax extensions (pymdownx)
+pymdownx.arithmatex.generic = true # LaTeX mathematical equations via MathJax/KaTeX
+pymdownx.betterem = {}          # Improved emphasis handling (_ and *)
+pymdownx.caret = {}             # Superscript / insert syntax (^^text^^)
+pymdownx.details = {}           # Collapsible details/accordion blocks
 pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
 pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
 pymdownx.highlight.anchor_linenums = true
 pymdownx.highlight.line_spans = "__span"
 pymdownx.highlight.pygments_lang_class = true
-pymdownx.inlinehilite = {}
-pymdownx.keys = {}
-pymdownx.magiclink = {}
-pymdownx.mark = {}
-pymdownx.smartsymbols = {}
-# pymdownx.snippets.base_path = "includes"
+pymdownx.inlinehilite = {}      # Inline code syntax highlighting
+pymdownx.keys = {}              # Keyboard key styling (<kbd>Ctrl</kbd>)
+pymdownx.magiclink = {}         # Auto-link raw URLs and emails
+pymdownx.mark = {}              # Text highlighting (==highlight==)
+pymdownx.smartsymbols = {}      # Typographic symbols (arrows, dashes, fractions)
+# pymdownx.snippets.base_path = "includes" # Include external markdown files
+
+# Custom code block extensions (e.g., Mermaid diagrams)
 pymdownx.superfences.custom_fences = [
   { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
 ]
-pymdownx.tabbed.alternate_style = true
-pymdownx.tabbed.combine_header_slug = true
-pymdownx.tasklist.custom_checkbox = true
-pymdownx.tilde = {}
 
-# Miscalleneous config
-############################################
+pymdownx.tabbed.alternate_style = true # Tabbed content blocks
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true # Interactive checkboxes in lists (- [x])
+pymdownx.tilde = {}             # Strikethrough syntax (~~text~~)

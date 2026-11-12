@@ -63,10 +63,10 @@
   --md-primary-fg-color--dark: #164b96;         /* Darker shade (active/pressed states) */
   --md-primary-bg-color: #ffffff;               /* High-contrast white text/icons on primary bg */
 
-  /* --- Accent Colors (UGent Corporate Yellow Highlights & Buttons) --- */
-  --md-accent-fg-color: #ffd200;                /* Exact UGent corporate yellow (#FFD200) */
-  --md-accent-fg-color--transparent: #ffd2001f; /* 12% opacity yellow tint for hover states */
-  --md-accent-bg-color: #0a1426;                /* Dark navy text on top of yellow accent bg */
+  /* --- Accent Colors (Replaced yellow with harmonious bright blue #72a7ff) --- */
+  --md-accent-fg-color: #72a7ff;                /* Bright accessible blue accent */
+  --md-accent-fg-color--transparent: #72a7ff1f; /* 12% opacity blue tint for hover states */
+  --md-accent-bg-color: #0a1426;                /* Dark navy text on top of accent bg */
 
   /* --- Typography & Links --- */
   --md-typeset-color: #f4f7fc;                  /* Soft high-contrast body text */
@@ -114,9 +114,9 @@
   font-weight: 600;
 }
 
-/* UGent yellow accent on active top navigation tabs in dark mode */
+/* Harmonious blue accent on active top navigation tabs in dark mode */
 [data-md-color-scheme="gifmi-dark"] .md-tabs__link--active {
-  color: #ffd200;
+  color: #72a7ff;
 }
 
 /* ==========================================================================
